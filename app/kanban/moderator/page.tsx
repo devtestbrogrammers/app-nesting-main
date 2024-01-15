@@ -94,7 +94,7 @@ export default function Page() {
             </div>     
             <div className='flex gap-[30px] flex-wrap'>
                 {boxData.map((item, index) => (
-                <BoxDefault>
+                <BoxDefault key={index}>
                     <div className='text-[#003C4D] text-[24px] font-bold leading-[34px]'>{item.heading}</div>
                     <div className='text-[#4F4F4F] text-[14px] leading-[21px]'>{item.text}</div>
                     <hr className='pb-[10px] mt-[10px]' />

@@ -177,7 +177,7 @@ export default function Page() {
         <div className='flex flex-col xl:flex-row gap-[28px]'>
           <div className='flex flex-col md:flex-row gap-[28px] text-[#757575]'>
             {headerData.map((item, index) => (
-              <div className={`flex items-center gap-[10px] ${index ? '' : 'text-[#003C4D]' } hover:text-[#003C4D] transition-all cursor-pointer`}>
+              <div className={`flex items-center gap-[10px] ${index ? '' : 'text-[#003C4D]' } hover:text-[#003C4D] transition-all cursor-pointer`} key={index}>
                 <div className="">{item.icon}</div>
                 <div className='text-[16px] leading-[28px] font-bold'>{item.text}</div>
               </div>
@@ -194,7 +194,7 @@ export default function Page() {
       <Link href='/kanban/moderator'>
       <div className='p-[24px] flex flex-col xl:flex-row justify-between items-center gap-[28px] flex-wrap'>
         {counterData.map((item, index) => (
-          <div className='flex items-center gap-[10px]'>
+          <div className='flex items-center gap-[10px]' key={index}>
             <div className='flex items-center gap-[10px]'>
               <BoxDefault className={`${item.color}`}>
                 <div className='text'>{item.text}</div>
@@ -212,7 +212,7 @@ export default function Page() {
       </Link>
       <div className='p-[24px] flex flex-col xl:flex-row gap-[24px] flex-wrap items-center xl:items-start'>
         {mainData.map((item, index) => (
-          <Link href={`/kanban/${item.title.toLowerCase()}`}>
+          <Link href={`/kanban/${item.title.toLowerCase()}`} key={index}>
             <div className='bg-[#fff] rounded-[8px] px-[22px] py-[17px] flex gap-[10px] flex-col w-[370px]'> 
               { item.title ?
               <div className='flex items-center gap-[10px]'> 
