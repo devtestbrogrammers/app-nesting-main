@@ -4,7 +4,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  externals: ['pino-pretty'],
+  externals: ['pino'],
 };
 
 module.exports = nextConfig;
