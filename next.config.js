@@ -4,7 +4,16 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  externals: ['pino'],
+  treeshake: {
+    moduleSideEffects: false,
+  },
+  plugins: [
+    commonjs({
+      exclude: [
+        'node_modules/pino-pretty/**',
+      ],
+    }),
+  ],
 };
 
 module.exports = nextConfig;
